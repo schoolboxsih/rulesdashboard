@@ -1,6 +1,8 @@
 .feed-widget {
 
     .feed-body {
+        overflow-y: scroll;
+        max-height: 270px;
         .feed-item {
             padding: 12px 0;
             display: flex;

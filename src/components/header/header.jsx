@@ -82,7 +82,7 @@ class Header extends React.Component {
 					<Collapse className="navbarbg" isOpen={this.state.isOpen} navbar data-navbarbg="skin1" >
 						<Nav className="ml-auto float-right" navbar>
 							<NavItem>
-								<a href="" className="btn btn-danger mr-2" style={{ marginTop: '15px' }}>Upgrade to Pro</a>
+								<a href="" className="btn btn-danger mr-2" style={{ marginTop: '15px' }}>read blogpost about this page</a>
 							</NavItem>
 							{/*--------------------------------------------------------------------------------*/}
 							{/* Start Profile Dropdown                                                         */}

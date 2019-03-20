@@ -1,4 +1,4 @@
-import Starter from '../views/starter/starter.jsx';
+import Home from '../views/home/home.jsx';
 // ui components
 import Alerts from '../views/ui-components/alert.jsx';
 import Badges from '../views/ui-components/badge.jsx';
@@ -14,7 +14,7 @@ var ThemeRoutes = [
     path: '/dashboard', 
     name: 'Home', 
     icon: 'ti-home', 
-    component: Starter 
+    component: Home 
   },
   {
     path: '/alert',

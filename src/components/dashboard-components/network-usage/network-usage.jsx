@@ -1,3 +1,6 @@
+// network usage by radius user groups
+// i.e by classes
+
 import React from "react";
 import {
 	Card,
@@ -38,16 +41,16 @@ class SalesSummary extends React.Component {
 				<CardBody>
 					<div className="d-flex align-items-center">
 						<div>
-							<CardTitle>Sales Summary</CardTitle>
-							<CardSubtitle>summary of the month</CardSubtitle>
+							<CardTitle>Network Usage</CardTitle>
+							<CardSubtitle>Network usage by class</CardSubtitle>
 						</div>
 						<div className="ml-auto d-flex align-items-center">
 							<ul className="list-inline font-12 dl mr-3 mb-0">
 								<li className="border-0 p-0 text-info list-inline-item">
-									<i className="fa fa-circle"></i> poop
+									<i className="fa fa-circle"></i> class 8
 								</li>
 								<li className="border-0 p-0 text-primary list-inline-item">
-									<i className="fa fa-circle"></i> Ipad
+									<i className="fa fa-circle"></i> class 9
 								</li>
 							</ul>
 						</div>

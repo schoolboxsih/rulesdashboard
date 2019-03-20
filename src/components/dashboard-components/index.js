@@ -1,9 +1,15 @@
-import SalesSummary from './sales-summary/sales-summary';
-import Projects from './projects/projects';
-import Feeds from './feeds/feeds';
+import NetworkUsage from './network-usage/network-usage';
+import OnlineUsers from './onlineusers/onlineusers';
+import Classes from './classes/classes';
+import Networks from './network-components/networks';
+import Urls from './network-components/urls';
+import Vlans from './network-components/vlans';
 
 export {
-    SalesSummary,
-    Projects,
-    Feeds
+    NetworkUsage,
+    OnlineUsers,
+    Classes,
+    Networks,
+    Urls,
+    Vlans,
 };
