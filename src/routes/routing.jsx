@@ -12,31 +12,31 @@ import TooltipComponent from '../views/ui-components/tooltip.jsx';
 var ThemeRoutes = [
   { 
     path: '/dashboard', 
-    name: 'Dashboard', 
-    icon: 'ti-loop', 
+    name: 'Home', 
+    icon: 'ti-home', 
     component: Starter 
   },
   {
     path: '/alert',
-    name: 'Alerts',
+    name: 'Rules',
     icon: 'mdi mdi-comment-processing-outline',
     component: Alerts
   },
   {
     path: '/badge',
-    name: 'Badges',
+    name: 'Policies',
     icon: 'mdi mdi-arrange-send-backward',
     component: Badges
   },
   {
     path: '/button',
-    name: 'Buttons',
+    name: 'Classes',
     icon: 'mdi mdi-toggle-switch',
     component: Buttons
   },
   {
     path: '/card',
-    name: 'Cards',
+    name: 'Insights',
     icon: 'mdi mdi-credit-card-multiple',
     component: Cards
   },
