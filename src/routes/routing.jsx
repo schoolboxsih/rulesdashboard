@@ -1,5 +1,6 @@
 import Home from '../views/home/home.jsx';
 import RulesPage from '../views/rulespage/rules';
+import NetworkUserPage from '../views/networkuserpage/networkuserpage';
 // ui components
 import Alerts from '../views/ui-components/alert.jsx';
 import Badges from '../views/ui-components/badge.jsx';
@@ -23,6 +24,12 @@ var ThemeRoutes = [
     icon: 'ti-ruler-alt',
     component: RulesPage,
   },
+  { 
+    path: '/users', 
+    name: 'Users', 
+    icon: 'ti-user',
+    component: NetworkUserPage,
+  },
   {
     path: '/alert',
     name: 'Alerts',
@@ -31,13 +38,13 @@ var ThemeRoutes = [
   },
   {
     path: '/badge',
-    name: 'Policies',
+    name: 'Badges',
     icon: 'mdi mdi-arrange-send-backward',
     component: Badges
   },
   {
     path: '/button',
-    name: 'Classes',
+    name: 'Buttons',
     icon: 'mdi mdi-toggle-switch',
     component: Buttons
   },

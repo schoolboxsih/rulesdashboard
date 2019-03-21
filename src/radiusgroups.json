@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Select One",
+        "groupname": "none"
+    },
+    {
+        "name": "Class 1",
+        "groupname": "class_1"
+    },
+    {
+        "name": "Class 2",
+        "groupname": "class_2"
+    },
+    {
+        "name": "Class 3",
+        "groupname": "class_3"
+    },
+    {
+        "name": "Class 4",
+        "groupname": "class_4"
+    },
+    {
+        "name": "Class 5",
+        "groupname": "class_5"
+    },
+    {
+        "name": "Class 6",
+        "groupname": "class_6"
+    },
+    {
+        "name": "Class 7",
+        "groupname": "class_7"
+    },
+    {
+        "name": "Class 8",
+        "groupname": "class_8"
+    },
+    {
+        "name": "Class 9",
+        "groupname": "class_9"
+    },
+    {
+        "name": "Class 10",
+        "groupname": "class_10"
+    },
+    {
+        "name": "Teachers",
+        "groupname": "teachers"
+    }
+]
