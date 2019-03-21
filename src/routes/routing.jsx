@@ -1,4 +1,5 @@
 import Home from '../views/home/home.jsx';
+import RulesPage from '../views/rulespage/rules';
 // ui components
 import Alerts from '../views/ui-components/alert.jsx';
 import Badges from '../views/ui-components/badge.jsx';
@@ -16,10 +17,16 @@ var ThemeRoutes = [
     icon: 'ti-home', 
     component: Home 
   },
+  { 
+    path: '/rules', 
+    name: 'Rules', 
+    icon: 'ti-ruler-alt',
+    component: RulesPage,
+  },
   {
     path: '/alert',
-    name: 'Rules',
-    icon: 'mdi mdi-comment-processing-outline',
+    name: 'Alerts',
+    icon: 'ti-ruler-alt',
     component: Alerts
   },
   {
