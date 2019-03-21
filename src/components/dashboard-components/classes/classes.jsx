@@ -5,6 +5,8 @@ import {
 	CardTitle,
 } from 'reactstrap';
 
+import groupnames from '../../../radiusgroups.json'
+
 class Classes extends React.Component {
 	render() {
 		return (
@@ -13,51 +15,19 @@ class Classes extends React.Component {
 					<CardTitle>Classes</CardTitle>
 					<div className="feed-widget">
 						<ul className="list-style-none feed-body m-0 pb-3">
-							<li className="feed-item">
-								<div className="feed-icon bg-success">
-									<i className="ti-book"></i>
-								</div>
-								Teachers
-								<span className="ml-auto mr-4 font-12 text-muted">
-									5 online
-								</span>
-							</li>
-							<li className="feed-item">
-								<div className="feed-icon bg-success">
-									<i className="ti-book"></i>
-								</div>
-								Class 8
-								<span className="ml-auto mr-4 font-12 text-muted">
-									4 online
-								</span>
-							</li>
-							<li className="feed-item">
-								<div className="feed-icon bg-success">
-									<i className="ti-book"></i>
-								</div>
-								Class 8
-								<span className="ml-auto mr-4 font-12 text-muted">
-									4 online
-								</span>
-							</li>
-							<li className="feed-item">
-								<div className="feed-icon bg-success">
-									<i className="ti-book"></i>
-								</div>
-								Class 8
-								<span className="ml-auto mr-4 font-12 text-muted">
-									4 online
-								</span>
-							</li>
-							<li className="feed-item">
-								<div className="feed-icon bg-success">
-									<i className="ti-book"></i>
-								</div>
-								Class 8
-								<span className="ml-auto mr-4 font-12 text-muted">
-									4 online
-								</span>
-							</li>
+							{
+								groupnames.slice(1).map(g=>(
+									<li key={g.groupname} className="feed-item">
+										<div className="feed-icon bg-success">
+											<i className="ti-book"></i>
+										</div>
+										{g.name}
+										<span className="ml-auto mr-4 font-12 text-muted">
+											5 online
+										</span>
+									</li>
+								))
+							}
 						</ul>
 					</div>
 				</CardBody>

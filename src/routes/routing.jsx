@@ -1,6 +1,9 @@
 import Home from '../views/home/home.jsx';
 import RulesPage from '../views/rulespage/rules';
 import NetworkUserPage from '../views/networkuserpage/networkuserpage';
+import PolicyPage from '../views/policypage/policypage'
+import NetworkObjectsPage from '../views/networkobjectspage/networkobjectspage';
+
 // ui components
 import Alerts from '../views/ui-components/alert.jsx';
 import Badges from '../views/ui-components/badge.jsx';
@@ -30,53 +33,17 @@ var ThemeRoutes = [
     icon: 'ti-user',
     component: NetworkUserPage,
   },
-  {
-    path: '/alert',
-    name: 'Alerts',
-    icon: 'ti-ruler-alt',
-    component: Alerts
+  { 
+    path: '/policy', 
+    name: 'Policies', 
+    icon: 'ti-list',
+    component: PolicyPage,
   },
-  {
-    path: '/badge',
-    name: 'Badges',
-    icon: 'mdi mdi-arrange-send-backward',
-    component: Badges
-  },
-  {
-    path: '/button',
-    name: 'Buttons',
-    icon: 'mdi mdi-toggle-switch',
-    component: Buttons
-  },
-  {
-    path: '/card',
-    name: 'Insights',
-    icon: 'mdi mdi-credit-card-multiple',
-    component: Cards
-  },
-  {
-    path: '/grid',
-    name: 'Grid',
-    icon: 'mdi mdi-apps',
-    component: LayoutComponent
-  },
-  {
-    path: '/pagination',
-    name: 'Pagination',
-    icon: 'mdi mdi-priority-high',
-    component: PaginationComponent
-  },
-  {
-    path: '/popover',
-    name: 'Popover',
-    icon: 'mdi mdi-pencil-circle',
-    component: PopoverComponent
-  },
-  {
-    path: '/ui-components/tooltip',
-    name: 'Toltips',
-    icon: 'mdi mdi-image-filter-vintage',
-    component: TooltipComponent
+  { 
+    path: '/netobjs', 
+    name: 'Network Objects', 
+    icon: 'ti-cloud',
+    component: NetworkObjectsPage,
   },
   { path: '/', pathTo: '/dashboard', name: 'Dashboard', redirect: true }
 ];

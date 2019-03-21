@@ -8442,6 +8442,24 @@ Preloader
     .comment-footer .action-icons a:hover, .comment-footer .action-icons a.active {
       color: #4fc3f7; }
 
+.feed-widget .feed-body-no-scroll .feed-item {
+  padding: 12px 0;
+  display: flex;
+  align-items: center; }
+  .feed-widget .feed-body-no-scroll .feed-item:hover {
+    background: #f6f9fc; }
+  .feed-widget .feed-body-no-scroll .feed-item > .feed-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 100%;
+    color: #fff; }
+    .feed-widget .feed-body-no-scroll .feed-item > .feed-icon i {
+      line-height: 40px; }
+
 .feed-widget .feed-body {
   overflow-y: scroll;
   max-height: 270px; }

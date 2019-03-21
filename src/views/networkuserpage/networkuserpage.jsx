@@ -15,17 +15,73 @@ import {
 
 import img1 from '../../assets/images/users/2.jpg';
 import AddForm from './adduserform.jsx'
+import ModifyUserForm from './modifyuserform'
+import InfoUser from './infouser'
 import groupnames from '../../radiusgroups.json'
+
+class UserItem extends React.Component {
+    constructor(props) {
+      super(props)
+      this.modifyForm = this.modifyForm.bind(this)
+      this.showInfo = this.showInfo.bind(this)
+      this.state = {}
+    }
+    modifyForm() {
+      this.props.setSelectedUserAction(true)
+      this.props.setSelectedUser(this.props.user)
+    }
+    showInfo() {
+      this.props.setSelectedUserAction(false)
+      this.props.setSelectedUser(this.props.user)
+    }
+    render() {
+        let user = this.props.user
+        return (
+	     <tr>
+	     	<td>
+	     	<h5 className="mb-0 font-16 font-medium">{user.name}</h5>
+               <span>{user.username}</span>
+            </td>
+	     	<td>
+               <Button 
+               onClick={this.modifyForm}
+               className="btn" 
+               color="primary" size="sm">Modify</Button>
+            </td>
+	     	<td>
+               <Button 
+               onClick={this.showInfo}
+               className="btn"
+               color="secondary" size="sm">Show Info</Button>
+            </td>
+	     </tr>
+        )
+    }
+}
 
 class NetworkUserPage extends React.Component {
     constructor(props) {
       super(props)
       this.toggleAddForm = this.toggleAddForm.bind(this)
-      this.state = { addFormCollapse: false }
+      this.setSelectedUser = this.setSelectedUser.bind(this)
+      this.setSelectedUserAction = this.setSelectedUserAction.bind(this)
+      this.state = {
+          addFormCollapse: false,
+          selectedUser: {},
+          selectedUserModify: false,
+      }
     }
 
     toggleAddForm() {
       this.setState(state => ({ addFormCollapse: !state.addFormCollapse }))
+    }
+
+    setSelectedUser(user) {
+      this.setState(state => ({ selectedUser: user }))
+    }
+
+    setSelectedUserAction(boo) {
+      this.setState(state => ({ selectedUserModify: boo }))
     }
  
     render() {
@@ -56,6 +112,22 @@ class NetworkUserPage extends React.Component {
                             </Col>
                         </Row>
                     </Card>
+                    <Card body>
+                      <CardTitle>Selected User</CardTitle>
+                      <CardText>
+                          {this.state.selectedUser.username
+                          ? (
+                              <div>
+                              {this.state.selectedUserModify
+                               ? <ModifyUserForm user={this.state.selectedUser}/>
+                               : <InfoUser user={this.state.selectedUser}/>
+                              }
+                              </div>
+                          )
+                          : "Click on Modify/Show Info"
+                          }
+                      </CardText>
+                    </Card>
                   </Col>
                   <Col>
                     <Card>
@@ -77,17 +149,17 @@ class NetworkUserPage extends React.Component {
                       </CardHeader>
                       <CardBody>
 					<Table className="no-wrap v-middle" responsive>
-						<thead>
-							<tr className="border-0">
-								<th className="border-0">User</th>
-								<th className="border-0">Action</th>
-							</tr>
-						</thead>
 						<tbody>
-							<tr>
-								<td>Elite Admin</td>
-								<td className="blue-grey-text  text-darken-4 font-medium">Modify</td>
-							</tr>
+                            <UserItem 
+                                user={{name: "Hrishikesh Barman", username: "geekodour", email: "asd"}}
+                                setSelectedUser={this.setSelectedUser}
+                                setSelectedUserAction={this.setSelectedUserAction}
+                            />
+                            <UserItem 
+                                user={{name: "Debanga Barman", username: "posd"}}
+                                setSelectedUser={this.setSelectedUser}
+                                setSelectedUserAction={this.setSelectedUserAction}
+                            />
 						</tbody>
 					</Table>
                       </CardBody>
